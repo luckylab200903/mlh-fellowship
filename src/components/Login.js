@@ -9,6 +9,7 @@ import { auth } from '../utils/firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { checkvaliddata } from '../utils/validation';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { BACKGROUND_URL } from "../constants/file";
 const Login = () => {
   const [signin, setSignin] = useState(true);
   const [errormessage,seterrormessage]=useState(null)
@@ -76,7 +77,7 @@ const Login = () => {
     <div>
       <Header />
       <div className='absolute'>
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/ab4b0b22-2ddf-4d48-ae88-c201ae0267e2/0efe6360-4f6d-4b10-beb6-81e0762cfe81/IN-en-20231030-popsignuptwoweeks-perspective_alpha_website_large.jpg" />
+        <img src={BACKGROUND_URL} />
       </div>
       <form onSubmit={(e)=>e.preventDefault()}  className='p-12 w-3/12 absolute bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-70'>
         <h1 className='font-bold p-4 text-3xl'>{signin ? "Sign in" : "Sign Up"}</h1>
@@ -84,7 +85,7 @@ const Login = () => {
         {!signin && <input type="text" placeholder='Full Name' ref={name}className="bg-gray-500 p-4 my-4 w-full rounded-lg" />}
         <input type="password" ref={password} placeholder='Password' className="p-4 my-4 w-full bg-gray-500 rounded-lg" />
         <p className='font-bold text-red-800'>{errormessage}</p>
-        <button  onClick={handlevalidation} className='p-4 my-6 bg-red-700 w-full'>{signin ? "Sign in" : "Sign Up"}</button>
+        <button  onClick={handlevalidation} className='font-bold p-4 my-6 bg-red-700 w-full'>{signin ? "Sign In" : "Sign Up"}</button>
         <p className='text-white font-bold cursor-pointer hover:underline' onClick={handleclick}>{signin ?  "New to Netflix sign up now":"Already a member" }</p>
       </form>
     </div>
