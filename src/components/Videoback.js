@@ -8,7 +8,7 @@ import useMovietrailer  from "../hooks/useMovietrailer";
     const trailerVedio=useSelector(store=>store.movies?.trailerVedio)
     useMovietrailer(movie_id)
     return (
-        <div className='w-screen overflow-x-scroll '>
+        <div className='w-screen overflow-x-scroll md:p-0 pt-[20%]'>
           <iframe className="w-screen aspect-video overflow-hidden" src={"https://www.youtube.com/embed/"+trailerVedio?.key+"?&autoplay=1&mute=1"}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>

@@ -9,8 +9,8 @@ const Maincontainer = () => {
 
   const mainmovie = movies[8];
   const {original_title,overview,id}=mainmovie
- return (<div>
-      <Videotitle title={original_title} overview={overview}/>
+ return (<div className='pt-[30%] bg-black md:pt-0'>
+      <Videotitle  className="" title={original_title} overview={overview}/>
       <Videoback movie_id={id}/>
  </div>)
 }

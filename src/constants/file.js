@@ -6,8 +6,13 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhY2IyM2FlZGNjMDUwMWFhZmFiYzAzOGYxN2RjNTMwZCIsInN1YiI6IjY1NDNlMGE3NzcxOWQ3MDBjNTFlODJiYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jqF__RTAHym5KjyAGLwqIGRPkqQRlyGtiFbQ7W6irB4'
+      Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhY2IyM2FlZGNjMDUwMWFhZmFiYzAzOGYxN2RjNTMwZCIsInN1YiI6IjY1NDNlMGE3NzcxOWQ3MDBjNTFlODJiYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jqF__RTAHym5KjyAGLwqIGRPkqQRlyGtiFbQ7W6irB4"
     }
   };
 
 export const IMAGE_LOGO="https://image.tmdb.org/t/p/w500";
+
+export const supported_lang=[{identifier:"en",name:"English"},{identifier:"hindi",name:"Hindi"},{identifier:"spanish",name:"Spanish"},{identifier:"urdu",name:"Urdu"}]
+
+
+export const open_ai_gpt ="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"
